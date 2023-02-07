@@ -1,38 +1,249 @@
+/* <-------------------------------> */
+/*               FOR ALL             */
+/* <-------------------------------> */
+
+@import "./fonts/stylesheet.css";
+
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  font-family: "SDW", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* <-------------------------------> */
+/*               FOR HEADER          */
+/* <-------------------------------> */
+header {
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
+  width: 1200px;
+  margin: 0 auto;
+}
+.logo img {
+  width: 160px;
+  height: 45px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* <-------------------------------> */
+/*               FOR HERO            */
+/* <-------------------------------> */
+
+.restaurant {
+  width: 1200px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.restaurant h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+.restaurant-description {
+  text-align: left;
+  padding-right: 50px;
+  font-family: "IBM PS", sans-serif;
+}
+
+.restaurant-description p {
+  font-size: 19px;
+  line-height: 29px;
+  color: #868a8a;
+}
+
+.brunch-image img {
+  width: 350px;
+  height: 200px;
+}
+
+/* <-------------------------------> */
+/*          LEFT OF MAIN PART        */
+/* <-------------------------------> */
+
+main {
+  width: 100vw;
+  background-color: #f2f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+main .left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 45px;
+}
+
+.category {
+  width: 850px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* border: blue solid 3px; */
+}
+
+.category h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.category div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+article {
+  height: 160px;
+  width: 400px;
+  font-family: "IBM PS", sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  /* border: blue solid 3px; */
+
+  /* justify-content: space-between; */
+}
+article div.text {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  /* border: green 3px solid; */
+  padding: 10px;
+}
+h3 {
+  font-size: 17px;
+  /* border: red 3px solid; */
+}
+
+.meal-description {
+  height: 35px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 20px;
+  color: #808484;
+  /* border: red 3px solid; */
+}
+
+img.square-images {
+  height: 130px;
+  width: 130px;
+  object-fit: cover;
+  object-position: center;
+  /* padding: 20px 10px; */
+}
+
+article img {
+  margin: auto 10px auto 0;
+  /* border: 3px red solid; */
+}
+
+img.hidden {
+  display: none;
+}
+
+/* <-------------------------------> */
+/*          BASKET     !!            */
+/* <-------------------------------> */
+
+.right {
+  width: 370px;
+}
+
+.right > div {
+  border: red 3px solid;
+  width: 350px;
+  margin-top: 30px;
+  margin-left: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right button {
+  height: 50px;
+  width: 330px;
+  border: none;
+  border-radius: 10px;
+  color: #8b9a9b;
+}
+button.blue-green {
+  background-color: #05cdbd;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.right div.full-basket > div {
+  height: 30vh;
+  max-height: 90vh;
+  display: flex;
+  /* flex-direction: column; */
+}
+.right .purchase {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: red; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ordered-meal {
+  display: flex;
 }
+.right .moreorless {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.right .empty-basket {
+  height: 185px;
+}
+
+.empty-basket button {
+  background-color: #bac3c3;
+  color: #8b9a9b;
+}
+
+.empty-basket p {
+  color: #808484;
+}
+
+/*
+.meal-item-text h3 {
+  font-size: 18px;
+}
+
+.meal-item-text p {
+  font-size: 14px;
+  color: #808484;
+}
+
+.price {
+  display: flex;
+  justify-content: space-around;
+}
+.price p {
+  font-size: 17px;
+}
+
+p.popular {
+  color: #ff8000;
+  font-size: 12px;
+  font-weight: bold;
+} */
