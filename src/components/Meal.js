@@ -6,6 +6,8 @@ const Meal = ({
   index,
   counter,
   setCounter,
+  price,
+  setPrice,
 }) => {
   const handleOrders = (index) => {
     setCounter(counter + 1);
@@ -17,6 +19,9 @@ const Meal = ({
       price: meal.price,
     });
     setOrders(copyOrders);
+    const copyPrice = [...price];
+    copyPrice.push(Number(meal.price));
+    setPrice(copyPrice);
     setIsOrdered(true);
   };
 

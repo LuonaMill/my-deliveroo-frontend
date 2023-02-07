@@ -10,6 +10,7 @@ function App() {
   const [isOrdered, setIsOrdered] = useState(false);
   const [orders, setOrders] = useState([]);
   const [counter, setCounter] = useState(1);
+  const [price, setPrice] = useState([0]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,6 +49,8 @@ function App() {
                       index={index}
                       counter={counter}
                       setCounter={setCounter}
+                      price={price}
+                      setPrice={setPrice}
                     />
                   );
                 } else {
@@ -65,7 +68,6 @@ function App() {
                     {orders.map((order, index) => {
                       return (
                         <div className="ordered-meal">
-                          {" "}
                           <button className="moreorless">-</button>
                           <p>{order.counter}</p>
                           <button className="moreorless">+</button>
@@ -73,6 +75,9 @@ function App() {
                           <p>{order.price} €</p>
                         </div>
                       );
+                    })}
+                    {price.reduce((accumulator, currentValue, index, array) => {
+                      return <p>{accumulator + currentValue}</p>;
                     })}
                   </div>
                 </div>

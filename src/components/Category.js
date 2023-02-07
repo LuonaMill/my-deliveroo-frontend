@@ -9,6 +9,8 @@ const Category = ({
   index,
   counter,
   setCounter,
+  price,
+  setPrice,
 }) => {
   return (
     <section className="category">
@@ -26,6 +28,8 @@ const Category = ({
               index={index}
               counter={counter}
               setCounter={setCounter}
+              price={price}
+              setPrice={setPrice}
             />
           );
         })}
