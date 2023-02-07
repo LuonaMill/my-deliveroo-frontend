@@ -7,6 +7,8 @@ const Category = ({
   orders,
   setOrders,
   index,
+  counter,
+  setCounter,
 }) => {
   return (
     <section className="category">
@@ -22,6 +24,8 @@ const Category = ({
               orders={orders}
               setOrders={setOrders}
               index={index}
+              counter={counter}
+              setCounter={setCounter}
             />
           );
         })}

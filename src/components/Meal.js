@@ -1,13 +1,28 @@
-const Meal = ({ meal, setIsOrdered, orders, setOrders, index }) => {
+const Meal = ({
+  meal,
+  setIsOrdered,
+  orders,
+  setOrders,
+  index,
+  counter,
+  setCounter,
+}) => {
   const handleOrders = (index) => {
+    setCounter(counter + 1);
+
     const copyOrders = [...orders];
-    copyOrders.push(meal.title);
+    copyOrders.push({
+      title: meal.title,
+      counter: counter,
+      price: meal.price,
+    });
     setOrders(copyOrders);
     setIsOrdered(true);
   };
 
   return (
     <article
+      key={meal.id}
       onClick={() => {
         handleOrders(index);
       }}

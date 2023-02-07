@@ -9,6 +9,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isOrdered, setIsOrdered] = useState(false);
   const [orders, setOrders] = useState([]);
+  const [counter, setCounter] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,6 +46,8 @@ function App() {
                       orders={orders}
                       setOrders={setOrders}
                       index={index}
+                      counter={counter}
+                      setCounter={setCounter}
                     />
                   );
                 } else {
@@ -64,10 +67,10 @@ function App() {
                         <div className="ordered-meal">
                           {" "}
                           <button className="moreorless">-</button>
-                          <p>0</p>
+                          <p>{order.counter}</p>
                           <button className="moreorless">+</button>
-                          <p>{order}</p>
-                          <p>Prix en €</p>
+                          <p>{order.title}</p>
+                          <p>{order.price} €</p>
                         </div>
                       );
                     })}
